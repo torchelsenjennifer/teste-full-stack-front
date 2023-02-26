@@ -1,0 +1,21 @@
+.card {
+    display: flex;
+    justify-content: center;
+   
+}
+
+.card_img {
+    width: 70%;
+
+}
+.card_valor {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card_categoria {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
