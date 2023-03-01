@@ -1,4 +1,8 @@
-
+.botao{
+    display: flex;
+    flex-direction: row;
+    gap: 50%;
+}
 button:hover {
     color: yellow;
 }
