@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { inAxios } from "../../config_axios";
+import { inAxios } from "../../../config_axios";
 
 import "./Listagem.css";
 import Card from "../Card";

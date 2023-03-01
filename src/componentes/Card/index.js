@@ -1,7 +1,7 @@
 import "./Card.css";
-import Botao from "../Botao";
+import Botao from "../../Botao";
 
-const Card = ({ foto, nome, preco, descricao, categoria, cor_letra, contorno }) => {
+const Card = ({ foto, nome, preco, descricao, categoria }) => {
   return (
     <div className="card">
       <img className="card_img" src={foto} alt="Produto" />
