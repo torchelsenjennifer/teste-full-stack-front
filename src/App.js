@@ -1,17 +1,19 @@
 import Menu from "./componentes/Menu";
-import Listagem from "./componentes/pages/Listagem";
+import Listagem from "./pages/Listagem";
+import Descricao from "./pages/Descricao";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-import Botao from "./componentes/Botao";
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Menu />
-        <Listagem />
+        <Route exact path="/">
+          <Menu />
+          <Listagem />
+        </Route>
         <Route exact path="/descricao">
-            <Botao />
-          </Route>
+          <Descricao />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

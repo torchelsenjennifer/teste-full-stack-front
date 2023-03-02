@@ -1,7 +1,10 @@
 import "./Card.css";
-import Botao from "../../Botao";
+import { useHistory } from "react-router-dom";
+import Botao from "../Botao";
 
 const Card = ({ foto, nome, preco, descricao, categoria }) => {
+  const history = useHistory();
+  const funcao = () => history.push("/descricao");
   return (
     <div className="card">
       <img className="card_img" src={foto} alt="Produto" />
@@ -11,18 +14,17 @@ const Card = ({ foto, nome, preco, descricao, categoria }) => {
       <h4 className="card_categoria">{categoria}</h4>
       <div className="botao">
         <Botao
-          // funcao={() => history.push("/detalhes")}
           texto={"INFORMAÇÕES"}
           cor_botao={"black"}
           cor_letra={"white"}
-          contorno={'10px'}
-
+          contorno={"10px"}
+          onClick={funcao}
         />
         <Botao
           texto={"ADICIONAR"}
           cor_botao={"black"}
           cor_letra={"white"}
-          contorno={'10px'}
+          contorno={"10px"}
         />
       </div>
     </div>
