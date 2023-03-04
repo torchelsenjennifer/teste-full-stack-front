@@ -1,26 +1,20 @@
-import React, { useState } from "react";
-import Botao from "../Botao";
+// import React, { useState } from "react";
+// import Botao from "../Botao";
 
-const Informacao = () => {
-  
-const [produto] = useState([])
+const Informacao = ({ id, nome, descricao, foto, preco }) => {
   return (
     <div className="descricao">
-                {produto.length ? (
-                    <>
-                        {produto.map((des) => (
-                            <div className='register' key={des.id}>
-                                <h1>{des.name}</h1>
-                                <h2>{des.descricao}</h2>
-                                <Botao  />
-                            </div>
-                        ))}
-                    </>
- ) : (
-  <div className='default-text'>
-      <h2>Descricao do produto</h2>
-  </div>
-)}
-</div>
-)}
-export default Informacao
+      <>
+        <div className="register" key={id}>
+          <h1>{id}</h1>
+          <h1>{foto}</h1>
+          <h1>{nome}</h1>
+          <h2>{descricao}</h2>
+          <h1>{preco}</h1>
+          {/* <Botao /> */}
+        </div>
+      </>
+    </div>
+  );
+};
+export default Informacao;

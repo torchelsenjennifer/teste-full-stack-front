@@ -11,9 +11,9 @@ function App() {
           <Menu />
           <Listagem />
         </Route>
-        <Route exact path="/descricao">
-          <Descricao />
-        </Route>
+        <Route exact path="/descricao/:id" render={(props) => (
+          <Descricao id={props.match.params.id}/>
+        )} />
       </Switch>
     </BrowserRouter>
   );
