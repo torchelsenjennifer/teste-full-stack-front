@@ -2,7 +2,7 @@ import "./Card.css";
 import { useHistory } from "react-router-dom";
 import Botao from "../Botao";
 
-const Card = ({ foto, nome, preco, descricao, categoria }) => {
+const Card = ({ foto, nome, preco, descricao, categoria, des }) => {
   const history = useHistory();
   const funcao = () => history.push("/descricao");
   return (
@@ -18,7 +18,8 @@ const Card = ({ foto, nome, preco, descricao, categoria }) => {
           cor_botao={"black"}
           cor_letra={"white"}
           contorno={"10px"}
-          onClick={funcao}
+          funcao={funcao}
+          des={des}
         />
         <Botao
           texto={"ADICIONAR"}

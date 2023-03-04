@@ -1,9 +1,10 @@
 // import { useHistory } from "react-router-dom";
+import Informacao from "../../componentes/Informacao";
 
-import Listagem from "../Listagem";
 
-const Descricao = () => {
-  return <Listagem />;
+const Descricao = (des) => {
+  return <Informacao 
+  />;
 };
 
 export default Descricao;
