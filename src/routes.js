@@ -1,15 +1,17 @@
 import Menu from "./componentes/Menu";
 import Listagem from "./pages/Listagem";
 import Descricao from "./pages/Descricao";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import Erro from "./pages/Erro";
+import {  Route, BrowserRouter, Switch } from "react-router-dom";
 
 function App() {
   return (
     <BrowserRouter>
+    
       {/* Todas as rotas precisam estar declaradas dentro desse escopo */}
       <Switch>
         {/* esse componente é utilizado a partir do momento que adicionamos várias rotas */}
-        <Route exact path="/">
+        <Route exact path="/" >
           <Menu />
           <Listagem />
         </Route>
@@ -25,7 +27,11 @@ function App() {
             </div>
           )}
         />
+        <Route exact path="*">
+          <Erro />
+        </Route>
       </Switch>
+     
     </BrowserRouter>
   );
 }
