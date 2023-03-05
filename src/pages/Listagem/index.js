@@ -22,12 +22,12 @@ const Listagem = () => {
 
   return (
     <div className="container py-5" >
-      <div className="row row-cols-md-3">
+     
         {produtos.map((produto) => (
           <Card {...produto} key={produto.id} />
         ))}
       </div>
-    </div>
+ 
   );
 };
 

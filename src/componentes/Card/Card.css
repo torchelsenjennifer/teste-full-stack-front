@@ -31,8 +31,9 @@ h3,p{
 }
 .btn{
     display: flex;
-    justify-content: space-between;
-    margin: 1rem;
+    flex-direction: row;
+    gap: 10px;
+    
 }
 
 
