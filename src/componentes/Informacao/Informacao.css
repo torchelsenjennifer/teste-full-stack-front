@@ -1,0 +1,14 @@
+
+.card_horizontal{
+    width: 100%;
+}
+.foto{
+    display: flex;
+    justify-content: center;
+
+}
+
+.card_lateral{
+    display: flex;
+    justify-content: center;
+}

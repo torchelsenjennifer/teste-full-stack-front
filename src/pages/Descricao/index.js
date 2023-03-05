@@ -3,16 +3,16 @@ import Informacao from "../../componentes/Informacao";
 import React from "react";
 import { useState, useEffect } from "react";
 import { inAxios } from "../../config_axios";
-
+import "./Descricao.css";
 const Descricao = ({ id }) => {
-//Recebe o parametro ID por prop
-//Prop: Atributo que pode passar para outro componente receber e mostrar para o usuario
+  //Recebe o parametro ID por prop
+  //Prop: Atributo que pode passar para outro componente receber e mostrar para o usuario
   const [produto, setProduto] = useState();
-//setProduto =  serve para atuaalizar a variavel produto
-//Necessário realizar uma requesição no Back para puxar as descrições do produto especifico
+  //setProduto =  serve para atuaalizar a variavel produto
+  //Necessário realizar uma requesição no Back para puxar as descrições do produto especifico
   const getProduto = async (id) => {
     try {
- //Requisição com a roda do banco
+      //Requisição com a roda do banco
       const produto = await inAxios.get(`produto/${id}`);
       setProduto(produto.data);
     } catch (erro) {
@@ -26,8 +26,10 @@ const Descricao = ({ id }) => {
   }, [id]);
 
   return (
-    
-  <Informacao {...produto} />) ;
+    <div className="container">
+      <Informacao {...produto} />
+    </div>
+  );
 };
 
 export default Descricao;
