@@ -21,8 +21,8 @@ const Listagem = () => {
   }, []);
 
   return (
-    <div className="container py-3">
-      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    <div className="container py-5" >
+      <div className="row row-cols-md-3">
         {produtos.map((produto) => (
           <Card {...produto} key={produto.id} />
         ))}

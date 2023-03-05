@@ -1,7 +1,9 @@
 // import React, { useState } from "react";
 // import Botao from "../Botao";
 
-const Informacao = ({ id, nome, descricao, foto, preco }) => {
+
+//Recebe os paramentos do produto especificio
+const Informacao = ({ id, nome, descricao, foto, preco, categoria_id }) => {
   return (
     <div className="descricao">
       <>
@@ -11,6 +13,7 @@ const Informacao = ({ id, nome, descricao, foto, preco }) => {
           <h1>{nome}</h1>
           <h2>{descricao}</h2>
           <h1>{preco}</h1>
+          <h1>{categoria_id}</h1>
           {/* <Botao /> */}
         </div>
       </>
