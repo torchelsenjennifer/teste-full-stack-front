@@ -25,7 +25,9 @@ const Descricao = ({ id }) => {
     getProduto(id);
   }, [id]);
 
-  return <Informacao {...produto} />;
+  return (
+    
+  <Informacao {...produto} />) ;
 };
 
 export default Descricao;

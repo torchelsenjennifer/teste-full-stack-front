@@ -1,22 +1,17 @@
 // import React, { useState } from "react";
 // import Botao from "../Botao";
 
-
 //Recebe os paramentos do produto especificio
-const Informacao = ({ id, nome, descricao, foto, preco, categoria_id }) => {
+const Informacao = ({ id, nome, descricao, foto, preco, categoria }) => {
   return (
-    <div className="descricao">
-      <>
-        <div className="register" key={id}>
-          <h1>{id}</h1>
-          <h1>{foto}</h1>
-          <h1>{nome}</h1>
-          <h2>{descricao}</h2>
-          <h1>{preco}</h1>
-          <h1>{categoria_id}</h1>
-          {/* <Botao /> */}
-        </div>
-      </>
+    <div className="descricao" key={id}>
+      <div className="foto">
+        <h1><img src={foto} alt="Produto"/></h1>
+      </div>
+      <div className="nome"><h1>{nome}</h1></div>
+      <div className="descricao"><p>{descricao}</p></div>
+      <div className="preco"><p>{preco}</p></div>
+     <div className="categoria"><p>{categoria}</p></div> 
     </div>
   );
 };

@@ -17,7 +17,9 @@ const Card = ({ foto, nome, preco, descricao, categoria, id }) => {
         <div className="card-body">
           <p>{descricao}</p>
         </div>
-        <div className="">{` R$${preco}`}</div>
+        <div className="card-preco">
+          <p>{`R$${preco}`}</p>
+        </div>
         <div className="card_categoria">
           <p> {categoria}</p>
         </div>

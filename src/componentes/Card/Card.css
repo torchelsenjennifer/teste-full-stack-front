@@ -1,5 +1,5 @@
 .card_container {
-        width: 300px;
+        width: 330px;
         overflow: hidden;
         box-shadow: 0px 0px 25px -5px;
         transition: 0.3s;
@@ -11,17 +11,19 @@
     box-shadow: 0px 0px 15px 0px;
     
 }
-.imagem-container img{
+.imagem_container img{
     overflow: hidden;
-    height: 200px;
+    height: 300px;
+    text-align: center;
 
 }
-.card_content{
+.card-content{
         margin: 1rem;
         margin-top: 0.3rem;
 }
 h3,p{
-    margin: 0.5rem;
+    justify-content: center;
+    margin: 1rem;
     padding: 0;
 }
 .card-title{
