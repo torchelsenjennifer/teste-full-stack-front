@@ -1,12 +1,13 @@
 .menu {
   display: flex;
-  justify-content: center;
-  gap: 20%;
+  flex-direction: row;
+  gap: 10%;
   background-color: black;
   color: white;
 }
 .menu_logo {
   width: 200px;
 }
-
-
+.menu_titulo{
+  margin: 2%;
+}
