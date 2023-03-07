@@ -1,15 +1,28 @@
-import { BsCartCheck } from "react-icons/bs";
-import Badge from "react-bootstrap/Badge";
+
+import Badge from '@mui/material/Badge';
+import IconButton from '@mui/material/IconButton';
 import { useHistory } from "react-router-dom";
-// import { useCarrinhoContext } from "../../context/Carrinho"
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import {useCarrinhoContext} from '../../context/Carrinho'
+
+
 
 function Carrinho() {
-  // const {quantidadeProdutos} = useCarrinhoContext();
+  const {quantidadeProdutos} = useCarrinhoContext();
   const history = useHistory();
   return (
-    <BsCartCheck size={50} onClick={() => history.push("/carrinho")}>
-      <Badge></Badge>
-    </BsCartCheck>
+    <IconButton
+    // disabled={quantidadeProdutos === 0}
+    onClick={() => history.push('/carrinho')}
+  >
+    <Badge
+      color="secondary"
+      badgeContent={quantidadeProdutos}
+    >
+      <ShoppingCartOutlinedIcon
+      color='secondary'/>
+    </Badge>
+  </IconButton>
   );
 }
 export default Carrinho;
