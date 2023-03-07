@@ -3,6 +3,8 @@ import Listagem from "./pages/Listagem";
 import Descricao from "./pages/Descricao";
 import Erro from "./pages/Erro";
 import {  Route, BrowserRouter, Switch } from "react-router-dom";
+import Carrinho from "./pages/Carrinho";
+import { CarrinhoProvider } from "./context/Carrinho";
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
           <Listagem />
         </Route>
         {/* Passando no path na roda com o id mais a renderização do componente descricao  */}
-
+        <CarrinhoProvider>
         <Route
           exact
           path="/descricao/:id"
@@ -27,9 +29,13 @@ function App() {
             </div>
           )}
         />
+        <Route exact path='/carrinho'>
+          <Carrinho/>
+        </Route>
         <Route exact path="*">
           <Erro />
         </Route>
+        </CarrinhoProvider>
       </Switch>
      
     </BrowserRouter>
