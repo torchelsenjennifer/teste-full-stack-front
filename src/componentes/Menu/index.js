@@ -1,11 +1,9 @@
 import "./Menu.css";
-import { BsCartCheck } from "react-icons/bs";
-import { useHistory } from 'react-router-dom';
-import { useCarrinhoContext } from "../../context/Carrinho"
+
+import Carrinho from "../../pages/Carrinho";
 
 const Menu = () => {
-  const {quantidadeProdutos} = useCarrinhoContext();
-  const history = useHistory();
+
   return (
     <div className="menu">
       <img
@@ -15,11 +13,7 @@ const Menu = () => {
       />
       <h1 className="menu_titulo">Estoque de Produtos e Categorias</h1>
       <div className="foto_carrinho">
-        <BsCartCheck
-          size={50}
-          disabled={quantidadeProdutos === 0}
-          onClick={() => history.push("/carrinho")}
-        ></BsCartCheck>
+       <Carrinho/>
       </div>
     </div>
   );
