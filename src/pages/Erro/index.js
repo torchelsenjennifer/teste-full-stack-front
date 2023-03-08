@@ -1,7 +1,4 @@
-
-function Erro(){
-return(
-        <div>Ops parece que essa pagina não existe! Reveja seu caminho!</div>
-)
+function Erro() {
+  return <div>Ops parece que essa pagina não existe! Reveja seu caminho!</div>;
 }
-export default Erro
+export default Erro;

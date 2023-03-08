@@ -21,13 +21,11 @@ const Listagem = () => {
   }, []);
 
   return (
-    <div className="container py-5" >
-     
-        {produtos.map((produto) => (
-          <Card {...produto} key={produto.id} />
-        ))}
-      </div>
- 
+    <div className="container py-5">
+      {produtos.map((produto) => (
+        <Card {...produto} key={produto.id} />
+      ))}
+    </div>
   );
 };
 

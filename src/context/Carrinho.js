@@ -48,18 +48,19 @@ export const useCarrinhoContext = () => {
   }
 
   useEffect(() => {
-    const{  novaQuantidade } = carrinho.reduce((contador,
-      produto) => ({
+    const { novaQuantidade } = carrinho.reduce(
+      (contador, produto) => ({
         novaQuantidade: contador.novaQuantidade + produto.quantidade,
         // novoTotal: contador.novoTotal + (produto.valor * produto.quantidade)
-      }),{
+      }),
+      {
         novaQuantidade: 0,
-        novoTotal: 0
-      });
+        novoTotal: 0,
+      }
+    );
     setQuantidadeProdutos(novaQuantidade);
     // setValorTotalCarrinho(novoTotal * formaPagamento.juros);
-
-  },[carrinho, setQuantidadeProdutos]);
+  }, [carrinho, setQuantidadeProdutos]);
 
   return {
     carrinho,

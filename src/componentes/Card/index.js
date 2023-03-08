@@ -1,7 +1,7 @@
 import "./Card.css";
 import { useHistory } from "react-router-dom";
 import Botao from "../Botao";
-import {useCarrinhoContext} from '../../context/Carrinho'
+import { useCarrinhoContext } from "../../context/Carrinho";
 
 const Card = ({ foto, nome, preco, descricao, categoria, id }) => {
   const history = useHistory();
@@ -39,7 +39,7 @@ const Card = ({ foto, nome, preco, descricao, categoria, id }) => {
           cor_botao={"black"}
           cor_letra={"white"}
           contorno={"10px"}
-          funcao= {() => adicionarProduto({ id, nome, descricao, preco, foto })}
+          funcao={() => adicionarProduto({ id, nome, descricao, preco, foto })}
         />
       </div>
     </div>

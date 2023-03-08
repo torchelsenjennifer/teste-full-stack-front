@@ -9,7 +9,7 @@ const Descricao = () => {
   //Recebe o parametro ID por prop
   //Prop: Atributo que pode passar para outro componente receber e mostrar para o usuario
   const [produto, setProduto] = useState();
-  const {id} =useParams();
+  const { id } = useParams();
   //setProduto =  serve para atuaalizar a variavel produto
   //Necessário realizar uma requesição no Back para puxar as descrições do produto especifico
   const getProduto = async (id) => {

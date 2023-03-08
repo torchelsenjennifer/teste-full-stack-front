@@ -1,9 +1,8 @@
 import "./Menu.css";
 
-import Carrinho from "../../pages/Carrinho";
+import Carrinho from "../Icone_Carrinho";
 
 const Menu = () => {
-
   return (
     <div className="menu">
       <img
@@ -13,7 +12,7 @@ const Menu = () => {
       />
       <h1 className="menu_titulo">Estoque de Produtos e Categorias</h1>
       <div className="foto_carrinho">
-       <Carrinho/>
+        <Carrinho />
       </div>
     </div>
   );
