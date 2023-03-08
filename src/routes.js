@@ -3,7 +3,7 @@ import Listagem from "./pages/Listagem";
 import Descricao from "./pages/Descricao";
 // import Erro from "./pages/Erro";
 import {  Route, BrowserRouter, Switch } from "react-router-dom";
-// import Carrinho from "./pages/Carrinho";
+import Carrinho from "./pages/Carrinho";
 import { CarrinhoProvider } from "./context/Carrinho";
 
 function App() {
@@ -30,9 +30,9 @@ function App() {
             </div>
           )}
         />
-        {/* <Route exact path='/carrinho'>
+        <Route exact path='/carrinho'>
           <Carrinho/>
-        </Route> */}
+        </Route>
         {/* <Route path="*">
           <Erro />
         </Route> */}
