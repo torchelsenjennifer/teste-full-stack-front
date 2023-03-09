@@ -31,6 +31,7 @@ function App() {
           )}
         />
         <Route exact path='/carrinho'>
+          <Menu/>
           <Carrinho/>
         </Route>
         {/* <Route path="*">

@@ -7,11 +7,12 @@ import ProdutoCarrinho from "../../componentes/ProdutoCarrinho";
 function Carrinho() {
   const { carrinho } = useCarrinhoContext();
 //   const history = useHistory();
+
   return (
     <Container className="titulo">
       {/* <ArrowBackIcon onClick={() => history.goBack()}/> */}
       {/* <h2 className="">Seu carrinho com os produtos adicionados estaram visíveis aqui!</h2> */}
-
+      
       {carrinho.map(produto => (
         <ProdutoCarrinho
         {...produto}
