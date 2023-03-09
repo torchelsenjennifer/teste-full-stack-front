@@ -1,6 +1,6 @@
 import { useCarrinhoContext } from "../../context/Carrinho";
 import { Container } from "react-bootstrap";
-import Card from "../../componentes/Card";
+import ProdutoCarrinho from "../../componentes/ProdutoCarrinho";
 // import { useHistory } from "react-router-dom";
 // import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
@@ -13,7 +13,7 @@ function Carrinho() {
       {/* <h2 className="">Seu carrinho com os produtos adicionados estaram visíveis aqui!</h2> */}
 
       {carrinho.map(produto => (
-        <Card
+        <ProdutoCarrinho
         {...produto}
         key={produto.id}
         />

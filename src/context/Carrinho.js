@@ -39,6 +39,15 @@ export const useCarrinhoContext = () => {
     setCarrinho(mudarQuantidade(novoProduto.id, 1));
   }
 
+  function removerProduto(id) {
+    const produto = carrinho.find(itemDoCarrinho => itemDoCarrinho.id === id);
+    const ehOUltimo = produto.quantidade === 1;
+    if(ehOUltimo) {
+      return setCarrinho(carrinhoAnterior => carrinhoAnterior.filter(itemDoCarrinho => itemDoCarrinho.id !== id));
+    };
+    setCarrinho(mudarQuantidade(id, -1));
+  }
+
   function mudarQuantidade(id, quantidade) {
     console.log(carrinho);
     return carrinho.map((itemDoCarrinho) => {
@@ -64,7 +73,9 @@ export const useCarrinhoContext = () => {
 
   return {
     carrinho,
+    setCarrinho,
     setQuantidadeProdutos,
+    removerProduto,
     quantidadeProdutos,
     adicionarProduto,
     mudarQuantidade,
