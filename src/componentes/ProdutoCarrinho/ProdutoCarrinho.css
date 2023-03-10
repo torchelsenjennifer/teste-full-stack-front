@@ -1,24 +1,19 @@
-.fundo{
-    background-color: rebeccapurple;
-    color: black;
-    
+.produto {
+    display: flex ;
+    flex-direction: row;
+    /* justify-content: space-between; */
 }
 
-.produto{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: 40px;
+.produto--info {
+ display: flex;
+ flex-direction: row;
 }
-.produto_imagem{
-    height: 40%;
-    width: 40%;
+.produto--info--imagem{
+    width: 50%;
+    height: 50%;
 }
-.soma{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: black;
-    color: white;
-    font-size: 30px ;
-}
+/* .produto--info--p {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 5px 0 0 5px;
+} */
